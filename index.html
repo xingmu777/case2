@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 003样式 */
+        .top {
+            display: flex;
+            color: #aaa;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .top-hr {
+            width: 0;
+            height: 50px;
+            outline: 1px solid #aaa;
+        }
+
+        .top form {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .top form input {
+            width: 120px;
+            padding-left: 10px;
+            margin-right: 10px;
+            outline: none;
+        }
+
+        .top form .log-in {
+            width: 50px;
+            padding-right: 10px;
+            color: white;
+            background-color: #0087be;
+            border: 1px solid #36829a;
+        }
+
+        .top form .log-in:hover {
+            cursor: pointer;
+            background-color: #36829a;
+        }
+
+        /* 001样式 */
+        .Grade {
+            border-spacing: 2px;
+            border-collapse: collapse;
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        .Grade .thead {
+            background-color: #ccc;
+        }
+        
+        .thead th {
+            width: 80px;
+            height: 40px;
+        }
+
+        .thead th:nth-child(1) {
+            width: 100px;
+        }
+
+        .thead th:nth-child(2) {
+            width: 200px;
+        }
+
+        .Grade tr th,
+        .Grade tr td {
+            outline: 1px solid #555555;
+        }
+
+        /* 002样式 */
+        .Review {
+            text-align: center;
+        }
+
+        .Review img {
+            width: 15%;
+        }
+
+        /* 004样式 */
+        .news {
+            text-align: center;
+            font-size: 80px;
+        }
+
+        .big {
+            text-align: center;
+        }
+
+        .big button {
+            width: 100px;
+            height: 30px;
+        }
+
+        .biger {
+            margin: 0 20px;
+        }
+
+        /* 005样式 */
+        .JDlog {
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        .JDlog a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .JDlog-form {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 60vw;
+            margin: 10px auto;
+        }
+
+        .JDlog-form input {
+            height: 50px;
+        }
+
+        .JDlogID,
+        .JDlogPass {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+            padding-left: 10px;
+        }
+
+        .JDlogBtn {
+            margin-top: 10px;
+            background-color: #fbb6b3;
+            border-radius: 30px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .log-more {
+            display: flex;
+            position: absolute;
+            top: 70px;
+            right: 10px;
+        }
+
+        .log-more div {
+            border: 1px solid #ccc;
+            width: 0;
+            height: 20px;
+            margin: 0 10px;
+        }
+
+        .log-more img {
+            width: 20px;
+            cursor: pointer;
+        }
+
+        .JDlog-foot {
+            width: 60vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* 006样式 */
+        .bigImg {
+            width: 600px;
+            height: 400px;
+            margin: 10px auto;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(./img/1.jpeg);
+            background-position: center;
+        }
+        
+        .small {
+            width: 80vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .small img {
+            height: 100px;
+        }
+        /* 007样式 */
+        #addli {
+            width: 80vw;
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: end;
+        }
+
+        #area {
+            width: 400px;
+            height: 200px;
+        }
+
+        #addli input {
+            width: 120px;
+            height: 30px;
+        }
+
+        #adds {
+            background-color: #fbb6b3;
+        }
+
+        #adds li {
+            width: 80vw;
+            margin: 10px auto;
+            border: none;
+            border-bottom: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #adds li button {
+            width: 150px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 003布局 -->
+    <div class="top">
+        <img src="./img/jy_logo.jpeg" alt="logo">
+        <div class="top-hr"></div>
+        <div>婚恋网站</div>
+        <form action="#">
+            <input class="logID" type="text" placeholder="邮箱/ID/手机号">
+            <input class="logPASS" type="password" placeholder="密码">
+            <input class="log-in" type="submit" value="登录">
+        </form>
+        <a href="#">海外用户登录</a>
+        <a href="#">忘记密码</a>
+    </div>
+
+    <!-- 001布局 -->
+    <table class="Grade">
+        <tr class="thead">
+            <th>姓名</th>
+            <th>科目</th>
+            <th>成绩</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>魏璎珞</td>
+            <td>JavaScript</td>
+            <td>100</td>
+            <td class="del">删除</td>
+        </tr>
+        <tr>
+            <td>弘历</td>
+            <td>JavaScript</td>
+            <td>90</td>
+            <td class="del">删除</td>
+        </tr>
+        <tr>
+            <td>傅恒</td>
+            <td>JavaScript</td>
+            <td>99</td>
+            <td class="del">删除</td>
+        </tr>
+        <tr>
+            <td>明玉</td>
+            <td>JavaScript</td>
+            <td>89</td>
+            <td class="del">删除</td>
+        </tr>
+    </table>
+
+    <!-- 002布局 -->
+    <div class="Review">
+        <img src="./img/爱心.png" alt="红心">
+        <img src="./img/爱心.png" alt="红心">
+        <img src="./img/爱心.png" alt="红心">
+        <img src="./img/爱心.png" alt="红心">
+        <img src="./img/爱心.png" alt="黑心">
+        <h2></h2>
+    </div>
+
+    <!-- 004布局 -->
+    <h1 class="news">出了个大新闻！！</h1>
+    <div class="big">
+        <button class="old">还原</button><button class="biger">变大50px</button><button class="bigest">变大80px</button>
+    </div>
+
+    <!-- 005布局 -->
+    <div class="JDlog">
+        <h2>京东登录</h2>
+        <form class="JDlog-form" action="#">
+            <div class="log-more">
+                <img src="./img/不显示密码.png" alt="不显示密码">
+                <div></div>
+                <a href="#">忘记密码</a>
+            </div>
+            <input class="JDlogID" type="text" placeholder="用户名/邮箱/已验证手机号">
+            <input class="JDlogPass" type="password" placeholder="密码">
+            <input class="JDlogBtn" type="submit" value="登录">
+        </form>
+        <div class="JDlog-foot">
+            <a href="#">短信验证码登录</a>
+            <a href="#">手机快速注册</a>
+        </div>
+    </div>
+
+    <!-- 006布局 -->
+    <div class="bigImg"></div>
+    <div class="small">
+        <img src="./img/1.jpeg" alt="s1">
+        <img src="./img/2.jpeg" alt="s2">
+        <img src="./img/3.jpeg" alt="s3">
+        <img src="./img/4.jpg" alt="s4">
+        <img src="./img/5.jpg" alt="s5">
+    </div>
+    <!-- 007布局 -->
+    <form action="#adds" id="addli">
+        <textarea name="texts" id="area"></textarea>
+        <input class="Action" type="button" value="发布">
+        <input type="reset" value="删除所有留言">
+    </form>
+    <ul id="adds">
+
+    </ul>
+
+</body>
+<script>
+    // 003js
+    var inputID=document.querySelector(".logID");
+    var inputPass=document.querySelector(".logPASS");
+    console.log([inputID]);
+    
+    inputID.onclick=function() {
+        inputID.placeholder="";
+        inputID.style="border:1px solid pink;"
+    }
+
+    inputID.onblur=function() {
+        inputID.placeholder="邮箱/ID/手机号";
+        inputID.style="border:1px solid black;"
+    }
+
+    inputPass.onclick=function() {
+        inputPass.placeholder="";
+        inputPass.style="border:1px solid pink;"
+    }
+
+    inputPass.onblur=function() {
+        inputPass.placeholder="密码";
+        inputPass.style="border:1px solid black;"
+    }
+
+    // 001js
+    var del = document.querySelectorAll(".del");
+    //console.log(del.length);
+    for(let i=0;i<del.length;i++) {
+        del[i].onclick=function() {
+            //console.log(del);
+            //console.log(del[i]);
+            //del[i].parentNode.style="display:none";
+            del[i].parentNode.remove();
+        }
+    }
+
+    // 002js
+    var love = document.querySelectorAll(".Review img");
+    var lovetext = document.querySelector(".Review h2");
+    //console.log(love.length);
+    for(let i=0;i<love.length;i++) {
+        love[i].onclick=function() {
+            //console.log(i);
+            //console.log(love[i]);
+            for(var j=0;j<=i;j++){
+                love[j].src="./img/爱心 (红).png";
+                love[j].alt="红心";
+            }
+            for(var k=i+1;k<love.length;k++) {
+                love[k].src="./img/爱心.png";
+                love[k].alt="黑心";
+            }
+            //console.log([lovetext]);
+            if (i===0) {
+                lovetext.innerText="糟糕";
+            } else if (i===1) {
+                lovetext.innerText="较差";
+            } else if (i===2) {
+                lovetext.innerText="中等";
+            } else if (i===3) {
+                lovetext.innerText="良好";
+            } else if (i===4) {
+                lovetext.innerText="优秀";
+            }
+        }
+    }
+
+    // 004js
+    var news = document.querySelector(".news");
+    var biger = document.querySelector(".biger");
+    var bigest = document.querySelector(".bigest");
+    var old = document.querySelector(".old");
+    biger.onclick=function() {
+        news.style="font-size:130px";
+    }
+    bigest.onclick=function() {
+        news.style="font-size:160px";
+    }
+    old.onclick=function() {
+        news.style="font-size:80px";
+    }
+
+    // 005js
+    var show = document.querySelector(".log-more>img");
+    var PASS = document.querySelector(".JDlogPass")
+    show.onclick=function() {
+        if(show.alt==="不显示密码") {
+            show.src = "./img/显示密码.png";
+            show.alt = "显示密码";
+            PASS.type = "text";
+        } else {
+            show.src = "./img/不显示密码.png";
+            show.alt = "不显示密码";
+            PASS.type = "password";
+        }
+    }
+
+    // 006js
+    var bigimg = document.querySelector(".bigImg");
+    var small = document.querySelectorAll(".small>img");
+    console.log(small);
+    
+    for(let i=0;i<small.length;i++) {
+        small[i].onclick=function() {
+            bigimg.style="background-image:url("+small[i].src+")";
+        }
+    }
+
+    // 007js
+    var area = document.querySelector("#area");
+    var Action = document.querySelector(".Action");
+    var adds = document.querySelector("#adds");
+    
+    Action.onclick=function() {
+        var add = document.createElement("li");
+        add.innerText=area.value;
+        console.log([area]);
+        area.value="";
+        console.log([add]);
+        adds.appendChild(add);
+        var liBtn = document.createElement("button");
+        liBtn.title = "删除";
+        liBtn.value = "删除";
+        liBtn.innerText = "删除";
+        add.appendChild(liBtn);
+        liBtn.onclick=function() {
+            liBtn.parentNode.remove();
+        }
+    }
+</script>
+</html>
